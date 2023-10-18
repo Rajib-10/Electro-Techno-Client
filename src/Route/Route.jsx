@@ -8,6 +8,7 @@ import AddProduct from "../pages/AddProduct/AddProduct";
 import LoadProduct from "../pages/LoadProduct/LoadProduct";
 import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import MyCart from "../pages/MyCart/MyCart";
+import PrivateRouter from "./PrivateRouter"
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/addProduct',
-            element: <AddProduct />
+            element: <PrivateRouter><AddProduct /></PrivateRouter>
         },
         {
             path: '/myCart',

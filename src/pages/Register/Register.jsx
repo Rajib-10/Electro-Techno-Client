@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Register = () => {
+
+    const {createUser,updateUserProfile,userLogOut} = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleSubmit =e=>{
         e.preventDefault()
@@ -10,8 +16,34 @@ const Register = () => {
         const photo = form.photo.value
         const email = form.email.value
         const password = form.password.value
+
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+            return toast.error("Invalid Email.")
+        }
+        if(password.length <6){
+            return toast.error("password is less than 6 characters")
+        }
+        if(!/[A-Z]/.test(password)){
+            return toast.error("password  don't have a capital letter")
+        }
+        if(!/[!@#$%^&*(),.?":{}|<>]/.test(password)){
+            return toast.error("password  don't have a special character")
+        }
         
-       
+        createUser(email,password)
+        .then(()=>{
+            updateUserProfile(name,photo)
+            .then(()=>{
+                toast.success("User Created Successfully.")
+                userLogOut()
+                navigate('/login')
+            })
+            
+        })
+       .catch(error=>{
+        toast.error(`${error.message}`)
+        console.log(error.message)
+       })
         
     }
 
@@ -45,6 +77,7 @@ const Register = () => {
       <Link to='/login'  className="underline dark:text-gray-100">Sign In</Link>
   </p>
 </div>
+        <Toaster />
     </div>
     );
 };

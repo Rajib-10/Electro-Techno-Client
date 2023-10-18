@@ -1,22 +1,47 @@
 /* eslint-disable react/no-unknown-property */
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
+	const navigate = useNavigate()
+	const location = useLocation()
+
+	const {googleLogin,userSign} = useContext(AuthContext)
 
     const handleSubmit =e=>{
         e.preventDefault()
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-        const user = {email,password}
-        console.log(user)
+        
+		userSign(email,password)
+		.then(result=>{
+			toast.success("User logged in Successfully.")
+			navigate(location?.state ? location.state : "/")
+			console.log(result.user)
+		})
+		.catch(error=>{
+			toast.error(`${error.message}`)
+			console.log(error.message)
+		})
         
     }
 
     const handleGoogle=()=>{
-        console.log("google icon is clicking")
+        googleLogin()
+		.then(result=>{
+			toast.success("User logged in Successfully.")
+			navigate(location?.state ? location.state : "/")
+			console.log(result.user)
+		})
+		.catch(error=>{
+			toast.error(`${error.message}`)
+			console.log(error.message)
+		})
     }
 
     return (
@@ -51,6 +76,7 @@ const Login = () => {
 		<Link to='/register'  className="underline dark:text-gray-100">Sign up</Link>
 	</p>
 </div>
+<Toaster/>
       </div>
     );
 };
