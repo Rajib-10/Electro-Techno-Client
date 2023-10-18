@@ -7,7 +7,7 @@ const NewProductPage = ({product}) => {
         <div>
            <div className="relative  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
-    <img className="h-[250px] w-full rounded-xl opacity-80"
+    <img className="h-[300px] w-full  rounded-xl opacity-80"
       src={image}
       alt="ui/ux review check"
     />

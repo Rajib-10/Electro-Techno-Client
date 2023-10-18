@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "productName": "Apple AirPods Pro",
+      "brandName": "Apple",
+      "image":"https://i.ibb.co/jJwbYX3/appleairbud.jpg"
+    },
+    {
+      "id": 2,
+      "productName": "Google Pixel 6 Pro",
+      "brandName": "Google",
+      "image":"https://i.ibb.co/2gqg2JB/pixel.jpg"
+    },
+    {
+      "id": 3,
+      "productName": "Samsung Galaxy S21 Ultra",
+      "brandName": "Samsung",
+      "image":"https://i.ibb.co/JvyY4CK/samsung1.jpg"
+    },
+    {
+      "id": 4,
+      "productName": "Apple Watch Series 7",
+      "brandName": "Apple",
+      "image":"https://i.ibb.co/mR1vVwF/apple-watch.png"
+    },
+    {
+      "id": 5,
+      "productName": "Sony Xperia 1 III",
+      "brandName": "Sony",
+      "image": "https://i.ibb.co/ydvKxnD/sony.jpg"
+    },
+    {
+      "id": 6,
+      "productName": "Samsung Galaxy S21",
+      "brandName": "Samsung",
+      "image":"https://i.ibb.co/swKG3NJ/samsung2.jpg"
+    }
+  ]
