@@ -1,9 +1,16 @@
+import Banner from "../../components/Header/Banner";
+import Brand from "./Brand";
+import NewProduct from "./NewProduct";
+import TopSelling from "./TopSelling";
 
 
 const Home = () => {
     return (
         <div>
-            this is home page
+            <Banner />
+            <Brand />
+            <NewProduct />
+            <TopSelling />
         </div>
     );
 };

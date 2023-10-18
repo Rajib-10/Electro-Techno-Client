@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "productName": "Lenovo ThinkPad X1 Carbon",
+      "brandName": "Lenovo",
+      "image": "https://i.ibb.co/KXjF8m8/lenovo-thinkpad.png",
+      "description": "The Lenovo ThinkPad X1 Carbon is a premium ultrabook designed for professionals seeking power, durability, and portability. It features a sleek design, high-resolution display, and exceptional performance.",
+      "arrivalDate": "2023-10-21"
+    },
+    {
+      "id": 2,
+      "productName": "Samsung Galaxy Z Fold 3",
+      "brandName": "Samsung",
+      "image": "https://i.ibb.co/9VG0d7Z/samsung.jpg",
+      "description": "The Samsung Galaxy Z Fold 3 is a cutting-edge foldable smartphone that combines a compact design with a large foldable display. It offers a seamless transition between phone and tablet modes, making it ideal for multitasking and immersive experiences.",
+      "arrivalDate": "2023-10-23"
+    },
+    {
+      "id": 3,
+      "productName": "Sony Wireless Headphones",
+      "brandName": "Sony",
+      "image": "https://i.ibb.co/6y6wch1/sony-headset.png",
+      "description": "The Sony WH-1000XM4 Wireless Noise-Canceling Headphones provide an exceptional audio experience with industry-leading noise cancellation. They offer long-lasting comfort, touch controls, and a stylish design, making them perfect for music enthusiasts and frequent travelers.",
+      "arrivalDate": "2023-10-24"
+    },
+    {
+      "id": 4,
+      "productName": "Lenovo RGB Gaming Mouse",
+      "brandName": "Lenovo",
+      "image": "https://i.ibb.co/HP73qsm/leveno-mouse.jpg",
+      "description": "The Lenovo Legion M500 RGB Gaming Mouse is designed for gamers seeking precision and performance. It features customizable RGB lighting, advanced tracking sensors, and ergonomic design for a comfortable grip during long gaming sessions.",
+      "arrivalDate": "2023-10-25"
+    },
+    {
+      "id": 5,
+      "productName": "Sony Alpha Digital Camera",
+      "brandName": "Sony",
+      "image": "https://i.ibb.co/zNCn6Mg/sony.jpg",
+      "description": "The Sony Alpha a7 III is a powerful mirrorless digital camera that delivers outstanding image quality and performance. It features a full-frame sensor, advanced autofocus, and 4K video capabilities, making it perfect for both enthusiasts and professionals.",
+      "arrivalDate": "2023-10-26"
+    },
+    {
+      "id": 6,
+      "productName": "MacBook Pro 13-inch",
+      "brandName": "Apple",
+      "image": "https://i.ibb.co/QrdnsLC/mackbookpro.jpg",
+      "description": "The MacBook Pro 13-inch is a powerful and versatile laptop designed for professionals and power users. With a stunning Retina display, advanced processors, and a sleek design, it's perfect for both work and creative tasks.",
+      "arrivalDate": "2023-10-22"
+    }
+  ]
