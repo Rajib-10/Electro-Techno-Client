@@ -9,6 +9,7 @@ import LoadProduct from "../pages/LoadProduct/LoadProduct";
 import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import MyCart from "../pages/MyCart/MyCart";
 import PrivateRouter from "./PrivateRouter"
+import DetailsProduct from "../pages/DetailsProduct/DetailsProduct";
 
 
 const router = createBrowserRouter([
@@ -38,12 +39,16 @@ const router = createBrowserRouter([
             element: <MyCart />
         },
         {
-            path: '/loadProduct',
+            path: '/loadProduct/:brandName',
             element: <LoadProduct />
         },
         {
-            path: '/updateProduct',
+            path: '/updateProduct/:id',
             element: <UpdateProduct />
+        },
+        {
+            path: '/detailsProduct/:id',
+            element: <DetailsProduct />
         }
     
     ]

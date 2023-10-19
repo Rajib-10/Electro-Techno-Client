@@ -7,7 +7,7 @@ const BrandPage = ({item}) => {
     const {brandName,brandImage} = item || {}
     return (
         <div>
-            <Link to='/loadProduct'>
+            <Link to={`/loadProduct/${brandName}`}>
             <div className="card h-[250px]  bg-base-100 shadow-xl image-full">
                 <figure><img className="w-full object-cover" src={brandImage} alt="Shoes" /></figure>
                 <div className="card-body">

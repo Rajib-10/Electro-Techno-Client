@@ -1,3 +1,5 @@
+import toast, { Toaster } from "react-hot-toast";
+
 
 
 const AddProduct = () => {
@@ -12,7 +14,21 @@ const AddProduct = () => {
        const price = form.price.value
        const rating = form.rating.value
        const addProduct = {image,name,brandName,shortDescription,type,price,rating}
-       console.log(addProduct)
+       
+       fetch("http://localhost:5000/products",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(addProduct)
+       })
+       .then(result=> result.json())
+       .then (data => {
+        if(data.insertedId){
+            toast.success("Product added successfully.")
+        }
+        console.log(data)
+       })
     }
     return (
         <div>
@@ -88,7 +104,7 @@ const AddProduct = () => {
               </div>
                 <input className="btn btn-neutral w-full my-4" type="submit" value="Add Product" />
             </form>
-
+            <Toaster />
         </div>
     );
 };
