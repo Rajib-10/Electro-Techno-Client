@@ -17,7 +17,7 @@ const LoadProduct = () => {
       }, [brandName]);
     return (
         <div>
-            {/* <div className="carousel w-full">
+            <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://i.ibb.co/swKG3NJ/samsung2.jpg" className="w-full h-[70vh] object-cover" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -46,13 +46,13 @@ const LoadProduct = () => {
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
-            </div> */}
+            </div>
 
-            <h1 className="text-3xl font-bold text-center">total products :{products.length}</h1>
+            <h1 className="text-xl md:text-3xl font-bold text-center">Your Desire Brand Product..</h1>
             {
-              products?.length <=0 ? <div className="flex justify-center items-center h-[70vh]"><h1 className="text-red-700 text-3xl font-bold">There is no available product right now!!!</h1></div> 
+              products?.length <=0 ? <div className="flex justify-center items-center h-[70vh]"><h1 className="text-red-700 text-xl md:text-3xl font-bold text-center">There is no available product right now!!!</h1></div> 
               :
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-6">
               {
                 products?.map(product=> <LoadProductPage key={product._id} product={product} />)
               }

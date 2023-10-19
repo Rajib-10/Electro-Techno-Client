@@ -5,18 +5,18 @@ const NewProductPage = ({product}) => {
     const {productName,brandName,image,description,arrivalDate} = product || {}
     return (
         <div>
-           <div className="relative  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+           <div className="relative  flex-col rounded-xl bg-white  shadow-md font-poppins">
+  <div className="relative  ">
     <img className="h-[300px] w-full  rounded-xl opacity-80"
       src={image}
       alt="ui/ux review check"
     />
   </div>
   <div className="p-6">
-    <h4 className="block  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+    <h4 className="block text-xl md:text-2xl lg:text-xl xl:text-2xl  font-semibold  ">
       {productName}
     </h4>
-    <p className="block mt-3  text-xl antialiased font-normal leading-relaxed text-gray-700">
+    <p className="block mt-3  text-xl lg:text-[17px] xl:text-xl  font-normal  ">
       {description.slice(0,80)}
     </p>
   </div>
@@ -24,7 +24,7 @@ const NewProductPage = ({product}) => {
     <div className="text-xl font-bold">
      {brandName}
     </div>
-    <p className="block  text-base antialiased font-normal leading-relaxed text-inherit">
+    <p className="block  text-base  font-normal ">
       {arrivalDate}
     </p>
   </div>

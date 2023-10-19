@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 
 const MyCart = () => {
     
-
+const {loading}= useContext(AuthContext)
 	const [products,setProducts] = useState([])
 
 	useEffect(()=>{
@@ -32,8 +33,15 @@ const MyCart = () => {
 
     return (
         <div className="flex justify-center items-center py-10">
-            <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
-	<h2 className="text-xl font-semibold">Your cart:{products.length}</h2>
+            {
+				loading ? 
+				
+				<div className="flex justify-center items-center h-screen"><span className="loading loading-bars loading-lg"></span></div>
+
+				:
+
+				<div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+	<h2 className="text-xl font-semibold">Your cart.</h2>
 	<ul className="flex flex-col divide-y divide-gray-700">
 		{
 			products?.map(product=> <li key={product._id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
@@ -64,6 +72,7 @@ const MyCart = () => {
 
 	
             </div>
+			}
 			<Toaster />
         </div>
     );

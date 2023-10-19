@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-
+import Rating from 'react-rating-stars-component';
 import { Link } from "react-router-dom";
 
 
@@ -9,11 +9,11 @@ const LoadProductPage = ({product}) => {
     const {_id,image,name,brandName,type,price,rating} = product || {}
     return (
         <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div class="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
+  <div class="relative w-[40%] md:w-[60%] m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img
       src={image}
       alt="image"
-      class="object-cover w-full h-full"
+      class="object-cover w-full h-full ]"
     />
   </div>
   <div class="p-6">
@@ -27,7 +27,16 @@ const LoadProductPage = ({product}) => {
      {type}
     </p>
     <p class="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-     Rating:{rating}
+     <Rating
+            count={5}
+            value={rating}
+            size={24}
+            edit={false} 
+            color2={'#ffd700'} 
+          />
+
+
+
     </p>
     <p class="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
      ${price}

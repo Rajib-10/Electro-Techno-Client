@@ -36,11 +36,11 @@ const DetailsProduct = () => {
     
     return (
         
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center my-6">
         <div className="max-w-lg p-4 shadow-md bg-base-100 dark:text-gray-100">
            <div className="space-y-4">
                <div className="space-y-2">
-                   <img className="h-[70vh] w-full object-cover" src={details.image} />
+                   <img className="h-[70vh] w-full object-cover rounded-lg" src={details.image} />
                    
                </div>
                <div className="space-y-2">

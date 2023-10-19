@@ -46,16 +46,16 @@ const UpdateProduct = () => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold text-center my-8">Update Product</h1>
+            <h1 className="text-xl md:text-3xl font-bold text-center my-8">Update Product</h1>
 
-<form className="md:w-[60%] mx-auto" onSubmit={handleAdd}>
+<form className="md:w-[70%] mx-auto p-4" onSubmit={handleAdd}>
     <div className="flex flex-col md:flex-row gap-6">
     <div className="form-control w-full">
     <label className="label">
         <span className="label-text">Image</span>
     </label>
     <label className="input-group">
-        <input type="text" placeholder="Image URL" name="image" defaultValue={image} className="input input-bordered" />
+        <input type="text" placeholder="Image URL" name="image" defaultValue={image} className="input input-bordered w-full" />
     </label>
 </div>
 <div className="form-control w-full">
@@ -63,7 +63,7 @@ const UpdateProduct = () => {
         <span className="label-text">Name</span>
     </label>
     <label className="input-group">
-        <input type="text" placeholder="Name" name="name" defaultValue={name} className="input input-bordered" />
+        <input type="text" placeholder="Name" name="name" defaultValue={name} className="input input-bordered w-full" />
     </label>
 </div>
     </div>
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
         <span className="label-text">Brand Name</span>
     </label>
     <label className="input-group">
-        <input type="text" placeholder="Brand Name" name="brandName" defaultValue={brandName} className="input input-bordered" />
+        <input type="text" placeholder="Brand Name" name="brandName" defaultValue={brandName} className="input input-bordered w-full" />
     </label>
       </div>
     <div className="form-control w-full">
@@ -82,7 +82,7 @@ const UpdateProduct = () => {
         <span className="label-text">Type</span>
     </label>
     <label className="input-group">
-        <input type="text" placeholder="Type" name="type" defaultValue={type} className="input input-bordered" />
+        <input type="text" placeholder="Type" name="type" defaultValue={type} className="w-full input input-bordered" />
     </label>
   </div>
 </div>
@@ -95,7 +95,7 @@ const UpdateProduct = () => {
         <span className="label-text">Price</span>
     </label>
     <label className="input-group">
-        <input type="text" placeholder="Price" name="price" defaultValue={price} className="input input-bordered" />
+        <input type="text" placeholder="Price" name="price" defaultValue={price} className="input input-bordered w-full" />
     </label>
       </div>
     <div className="form-control w-full">
@@ -103,7 +103,7 @@ const UpdateProduct = () => {
         <span className="label-text">Rating</span>
     </label>
     <label className="input-group">
-        <input type="number" placeholder="Rating" name="rating" defaultValue={rating} className="input input-bordered" />
+        <input type="number" placeholder="Rating" name="rating" defaultValue={rating} className="input input-bordered w-full" />
     </label>
   </div>
 </div>

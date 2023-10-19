@@ -26,6 +26,7 @@ const AddProduct = () => {
        .then (data => {
         if(data.insertedId){
             toast.success("Product added successfully.")
+            form.reset()
         }
         console.log(data)
        })
@@ -34,14 +35,14 @@ const AddProduct = () => {
         <div>
             <h1 className="text-3xl font-bold text-center my-8">Add Product</h1>
 
-            <form className="md:w-[60%] mx-auto" onSubmit={handleAdd}>
+            <form className="md:w-[70%] mx-auto p-4" onSubmit={handleAdd}>
                 <div className="flex flex-col md:flex-row gap-6">
                 <div className="form-control w-full">
                 <label className="label">
                     <span className="label-text">Image</span>
                 </label>
                 <label className="input-group">
-                    <input type="text" placeholder="Image URL" name="image" className="input input-bordered" />
+                    <input type="text" placeholder="Image URL" name="image" required className="input input-bordered w-full" />
                 </label>
             </div>
             <div className="form-control w-full">
@@ -49,7 +50,7 @@ const AddProduct = () => {
                     <span className="label-text">Name</span>
                 </label>
                 <label className="input-group">
-                    <input type="text" placeholder="Name" name="name" className="input input-bordered" />
+                    <input type="text" placeholder="Name" name="name" required className="w-full input input-bordered" />
                 </label>
             </div>
                 </div>
@@ -60,7 +61,7 @@ const AddProduct = () => {
                     <span className="label-text">Brand Name</span>
                 </label>
                 <label className="input-group">
-                    <input type="text" placeholder="Brand Name" name="brandName" className="input input-bordered" />
+                    <input type="text" placeholder="Brand Name" required name="brandName" className="input input-bordered w-full" />
                 </label>
                   </div>
                 <div className="form-control w-full">
@@ -68,7 +69,7 @@ const AddProduct = () => {
                     <span className="label-text">Type</span>
                 </label>
                 <label className="input-group">
-                    <input type="text" placeholder="Type" name="type" className="input input-bordered" />
+                    <input type="text" placeholder="Type" name="type" required className="w-full input input-bordered" />
                 </label>
               </div>
             </div>
@@ -81,7 +82,7 @@ const AddProduct = () => {
                     <span className="label-text">Price</span>
                 </label>
                 <label className="input-group">
-                    <input type="text" placeholder="Price" name="price" className="input input-bordered" />
+                    <input type="text" placeholder="Price" name="price" required className="input input-bordered w-full" />
                 </label>
                   </div>
                 <div className="form-control w-full">
@@ -89,7 +90,7 @@ const AddProduct = () => {
                     <span className="label-text">Rating</span>
                 </label>
                 <label className="input-group">
-                    <input type="number" placeholder="Rating" name="rating" className="input input-bordered" />
+                    <input type="text" placeholder="Rating" name="rating" required className="input input-bordered w-full" />
                 </label>
               </div>
             </div>
@@ -99,7 +100,7 @@ const AddProduct = () => {
                     <span className="label-text">Short Description</span>
                 </label>
                 <label className="input-group">
-                    <input type="text" placeholder="Short Description" name="shortDescription" className="input input-bordered w-full" />
+                    <input type="text" placeholder="Short Description" required name="shortDescription" className="input input-bordered w-full" />
                 </label>
               </div>
                 <input className="btn btn-neutral w-full my-4" type="submit" value="Add Product" />
