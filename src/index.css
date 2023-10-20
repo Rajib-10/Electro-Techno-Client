@@ -5,6 +5,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    background: white;
+    color: black;
+}
+
+[data-theme='dark'] {
+    background: #282c34;
+    color: white;
+ 
+}
+
+*{
+    transition: all 0.2s ease-in-out;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }

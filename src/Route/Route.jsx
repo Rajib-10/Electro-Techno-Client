@@ -44,11 +44,11 @@ const router = createBrowserRouter([
         },
         {
             path: '/updateProduct/:id',
-            element: <UpdateProduct />
+            element: <PrivateRouter><UpdateProduct /></PrivateRouter>
         },
         {
             path: '/detailsProduct/:id',
-            element: <DetailsProduct />
+            element:<PrivateRouter> <DetailsProduct /></PrivateRouter>
         }
     
     ]

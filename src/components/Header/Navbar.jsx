@@ -2,6 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../../src/assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import DarkMode from "../../DarkMode/DarkMode";
+
 const Navbar = () => {
 
 
@@ -76,8 +78,9 @@ const Navbar = () => {
     :
     <Link to='/login' className="btn btn-sm">Login</Link>
   }
+ 
 
-    
+    <DarkMode />
   </div>
 </div>
     );
