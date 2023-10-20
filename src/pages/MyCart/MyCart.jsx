@@ -1,27 +1,24 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 const MyCart = () => {
- const [loading,setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://electro-techno-server-5254cr8n8-rajib-10.vercel.app/cart")
+    fetch("https://electro-techno-server.vercel.app/cart")
       .then((result) => result.json())
       .then((data) => {
-        setProducts(data)
-        setLoading(false)
+        setProducts(data);
+        setLoading(false);
       });
   }, []);
 
   const handleRemove = (id) => {
     console.log("id", id);
-    fetch(
-      `https://electro-techno-server-5254cr8n8-rajib-10.vercel.app/cart/${id}`,
-      {
-        method: "DELETE",
-      }
-    )
+    fetch(`https://electro-techno-server.vercel.app/cart/${id}`, {
+      method: "DELETE",
+    })
       .then((result) => result.json())
       .then((data) => {
         if (data.deletedCount > 0) {

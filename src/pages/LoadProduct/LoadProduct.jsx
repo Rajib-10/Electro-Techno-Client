@@ -4,12 +4,10 @@ import LoadProductPage from "./LoadProductPage";
 
 const LoadProduct = () => {
   const { brandName } = useParams();
-  const [loading,setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://electro-techno-server-5254cr8n8-rajib-10.vercel.app/products"
-    )
+    fetch("https://electro-techno-server.vercel.app/products")
       .then((result) => result.json())
       .then((data) => {
         const filteredProducts = data.filter(
@@ -17,7 +15,7 @@ const LoadProduct = () => {
             product.brandName.toLowerCase() === brandName.toLowerCase()
         );
         setProducts(filteredProducts);
-        setLoading(false)
+        setLoading(false);
       });
   }, [brandName]);
   return (
@@ -84,31 +82,27 @@ const LoadProduct = () => {
       <h1 className="text-xl md:text-3xl font-bold text-center">
         Your Desire Brand Product..
       </h1>
-      {
-        loading ? <div className="flex justify-center items-center h-screen">
-        <span className="loading loading-bars loading-lg"></span>
-      </div>: <div>
-
-      {products?.length <= 0 ? (
-        <div className="flex justify-center items-center h-[70vh]">
-          <h1 className="text-red-700 text-xl md:text-3xl font-bold text-center">
-            There is no available product right now!!!
-          </h1>
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <span className="loading loading-bars loading-lg"></span>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-6">
-          {products?.map((product) => (
-            <LoadProductPage key={product._id} product={product} />
-          ))}
+        <div>
+          {products?.length <= 0 ? (
+            <div className="flex justify-center items-center h-[70vh]">
+              <h1 className="text-red-700 text-xl md:text-3xl font-bold text-center">
+                There is no available product right now!!!
+              </h1>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-6">
+              {products?.map((product) => (
+                <LoadProductPage key={product._id} product={product} />
+              ))}
+            </div>
+          )}
         </div>
       )}
-
-      </div>
-
-      
-
-      }
-     
     </div>
   );
 };

@@ -21,16 +21,13 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch(
-      "https://electro-techno-server-5254cr8n8-rajib-10.vercel.app/products",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(addProduct),
-      }
-    )
+    fetch("https://electro-techno-server.vercel.app/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addProduct),
+    })
       .then((result) => result.json())
       .then((data) => {
         if (data.insertedId) {

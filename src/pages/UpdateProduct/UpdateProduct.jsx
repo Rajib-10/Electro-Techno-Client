@@ -8,9 +8,7 @@ const UpdateProduct = () => {
     details || {};
   const { id } = useParams();
   useEffect(() => {
-    fetch(
-      `https://electro-techno-server-5254cr8n8-rajib-10.vercel.app/products/${id}`
-    )
+    fetch(`https://electro-techno-server.vercel.app/products/${id}`)
       .then((result) => result.json())
       .then((data) => setDetails(data));
   }, [id]);
@@ -37,16 +35,13 @@ const UpdateProduct = () => {
 
     console.log(addProduct);
 
-    fetch(
-      `https://electro-techno-server-5254cr8n8-rajib-10.vercel.app/products/${id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(addProduct),
-      }
-    )
+    fetch(`https://electro-techno-server.vercel.app/products/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addProduct),
+    })
       .then((result) => result.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
