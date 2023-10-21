@@ -9,11 +9,11 @@ const LoadProductPage = ({product}) => {
     const {_id,image,name,brandName,type,price,rating} = product || {}
     return (
         <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div class="relative w-[40%] md:w-[60%] m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
+  <div class="relative w-[46%] md:w-[60%] m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img
       src={image}
       alt="image"
-      class="object-cover w-full h-full ]"
+      class=" object-cover  w-full h-full ]"
     />
   </div>
   <div class="p-6">

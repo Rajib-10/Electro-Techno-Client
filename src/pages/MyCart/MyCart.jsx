@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const MyCart = () => {
+  const {user} = useContext(AuthContext)
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
 
@@ -9,10 +11,11 @@ const MyCart = () => {
     fetch("https://electro-techno-server.vercel.app/cart")
       .then((result) => result.json())
       .then((data) => {
-        setProducts(data);
+        const findData = data.filter(item=>item.email===user.email)
+        setProducts(findData);
         setLoading(false);
       });
-  }, []);
+  }, [user.email]);
 
   const handleRemove = (id) => {
     console.log("id", id);
@@ -38,7 +41,11 @@ const MyCart = () => {
         </div>
       ) : (
         <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
-          <h2 className="text-xl font-semibold">Your cart.</h2>
+         {
+          products.length>0 ? <h2 className="text-xl font-semibold">Your cart.</h2> :
+          <h2 className="text-xl font-semibold text-center">You have not added any products yet</h2>
+         }
+          
           <ul className="flex flex-col divide-y divide-gray-700">
             {products?.map((product) => (
               <li

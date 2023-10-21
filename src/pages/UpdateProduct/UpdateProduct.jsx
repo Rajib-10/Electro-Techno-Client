@@ -141,7 +141,7 @@ const UpdateProduct = () => {
             </label>
             <label className="input-group">
               <input
-                type="number"
+                type="text"
                 placeholder="Rating"
                 name="rating"
                 defaultValue={rating}

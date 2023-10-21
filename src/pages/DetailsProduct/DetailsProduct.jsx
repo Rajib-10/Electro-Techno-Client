@@ -1,9 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
+
 const DetailsProduct = () => {
   const [details, setDetails] = useState({});
   const { id } = useParams();
+
+  const {user} = useContext(AuthContext)
+  
+
+
   useEffect(() => {
     fetch(`https://electro-techno-server.vercel.app/products/${id}`)
       .then((result) => result.json())
@@ -14,7 +21,8 @@ const DetailsProduct = () => {
     const image = details.image;
     const name = details.name;
     const brandName = details.brandName;
-    const addCart = { image, name, brandName };
+    const email = user.email
+    const addCart = { image, name, brandName,email };
 
     console.log(addCart);
 
