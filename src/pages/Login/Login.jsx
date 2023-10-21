@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
 	const navigate = useNavigate()
@@ -45,6 +46,7 @@ const Login = () => {
     }
 
     return (
+		
       <div className="flex justify-center items-center my-10">
           <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-700 ">
 	<h1 className="text-2xl font-bold text-center text-white">Login</h1>
@@ -77,6 +79,9 @@ const Login = () => {
 	</p>
 </div>
 <Toaster/>
+		<Helmet>
+			<title>Electro&Techno | Login</title>
+		</Helmet>
       </div>
     );
 };

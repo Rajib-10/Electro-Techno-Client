@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const MyCart = () => {
   const {user} = useContext(AuthContext)
@@ -86,6 +87,9 @@ const MyCart = () => {
         </div>
       )}
       <Toaster />
+      <Helmet>
+        <title>Electro&Techno | MyCart</title>
+      </Helmet>
     </div>
   );
 };

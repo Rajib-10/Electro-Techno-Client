@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
+import { Helmet } from 'react-helmet';
 import Rating from 'react-rating-stars-component';
 import { Link } from "react-router-dom";
 
@@ -87,6 +88,10 @@ const LoadProductPage = ({product}) => {
       </Link>
     
   </div>
+  <Helmet>
+      <title>Electro&Techno | Brand Product</title>
+    </Helmet>
+    
 </div>
     );
 };

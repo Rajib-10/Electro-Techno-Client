@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const DetailsProduct = () => {
   const [details, setDetails] = useState({});
@@ -68,6 +69,9 @@ const DetailsProduct = () => {
           </div>
         </div>
       </div>
+      <Helmet>
+      <title>Electro&Techno | Details</title>
+    </Helmet>
       <Toaster />
     </div>
   );

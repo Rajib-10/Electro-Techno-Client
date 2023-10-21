@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "../../components/Header/Banner";
 import Brand from "./Brand";
 import NewProduct from "./NewProduct";
@@ -11,6 +12,9 @@ const Home = () => {
             <Brand />
             <NewProduct />
             <TopSelling />
+            <Helmet>
+                <title>Electro&Techno | Home</title>
+            </Helmet>
         </div>
     );
 };

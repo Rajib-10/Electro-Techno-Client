@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -78,6 +79,10 @@ const Register = () => {
   </p>
 </div>
         <Toaster />
+        <Helmet>
+      <title>Electro&Techno | Register</title>
+    </Helmet>
+    
     </div>
     );
 };

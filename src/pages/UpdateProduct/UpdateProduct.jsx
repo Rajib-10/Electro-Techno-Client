@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 
@@ -171,7 +172,9 @@ const UpdateProduct = () => {
           value="Update"
         />
       </form>
-
+    <Helmet>
+      <title>Electro&Techno | Update</title>
+    </Helmet>
       <Toaster />
     </div>
   );

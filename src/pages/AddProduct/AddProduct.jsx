@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import toast, { Toaster } from "react-hot-toast";
 
 const AddProduct = () => {
@@ -156,6 +157,10 @@ const AddProduct = () => {
         />
       </form>
       <Toaster />
+      <Helmet>
+      <title>Electro&Techno | Add Product</title>
+    </Helmet>
+    
     </div>
   );
 };
