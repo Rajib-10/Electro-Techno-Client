@@ -3,6 +3,7 @@ import logo from '../../../src/assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import DarkMode from "../../DarkMode/DarkMode";
+import toast, { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
 
@@ -35,6 +36,13 @@ const Navbar = () => {
   My Cart
 </NavLink></li>
     </>
+
+    const handleLogOut=()=>{
+      userLogOut()
+      .then(()=>{
+        toast.success("user logged out successfully.")
+      })
+    }
 
     return (
         <div className="navbar bg-base-100">
@@ -72,7 +80,7 @@ const Navbar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
         <li className="text-center">{user?.displayName}</li>
-        <li><button onClick={()=>(userLogOut())} className="btn btn-sm">Logout</button></li>
+        <li><button onClick={handleLogOut} className="btn btn-sm">Logout</button></li>
       </ul>
     </div> 
     :
@@ -82,6 +90,7 @@ const Navbar = () => {
 
     <DarkMode />
   </div>
+  <Toaster />
 </div>
     );
 };

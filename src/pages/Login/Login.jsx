@@ -51,11 +51,11 @@ const Login = () => {
 	<form  className="space-y-6" onSubmit={handleSubmit}>
 		<div className="space-y-1 text-sm">
 			<label for="username" className="block dark:text-gray-400">Email</label>
-			<input type="email" name="email" id="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md outline-none" />
+			<input type="email" name="email" required id="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md outline-none" />
 		</div>
 		<div className="space-y-1 text-sm">
 			<label for="password" className="block dark:text-gray-400">Password</label>
-			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md outline-none " />
+			<input type="password" name="password" required id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md outline-none " />
 			
 		</div>
 		<input type="submit" value="Sign IN" className="block w-full cursor-pointer p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400"/>

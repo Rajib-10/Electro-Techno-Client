@@ -54,19 +54,19 @@ const Register = () => {
   <form  className="space-y-6" onSubmit={handleSubmit}>
         <div className="space-y-1 text-sm">
           <label  className="block dark:text-gray-400">Name</label>
-          <input type="text" name="name" id="name" placeholder="Your Name" className="w-full px-4 py-3 rounded-md outline-none" />
+          <input type="text" name="name" id="name" required placeholder="Your Name" className="w-full px-4 py-3 rounded-md outline-none" />
       </div>
       <div className="space-y-1 text-sm">
           <label  className="block dark:text-gray-400">Photo URL</label>
-          <input type="text" name="photo" id="photo" placeholder="Photo url" className="w-full px-4 py-3 rounded-md outline-none" />
+          <input type="text" name="photo" id="photo" required placeholder="Photo url" className="w-full px-4 py-3 rounded-md outline-none" />
       </div>
       <div className="space-y-1 text-sm">
           <label  className="block dark:text-gray-400">Email</label>
-          <input type="email" name="email" id="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md outline-none" />
+          <input type="email" name="email" id="email" required placeholder="Your Email" className="w-full px-4 py-3 rounded-md outline-none" />
       </div>
       <div className="space-y-1 text-sm">
           <label  className="block dark:text-gray-400">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md outline-none " />
+          <input type="password" name="password" id="password" required placeholder="Password" className="w-full px-4 py-3 rounded-md outline-none " />
           
       </div>
       <input type="submit" value="Sign Up" className="block w-full cursor-pointer p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400"/>
