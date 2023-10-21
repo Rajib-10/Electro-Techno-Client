@@ -14,7 +14,7 @@ const LoadProductPage = ({product}) => {
     <img
       src={image}
       alt="image"
-      class=" object-cover  w-full h-full ]"
+      class=" object-cover  w-full h-full lg:h-[400px]"
     />
   </div>
   <div class="p-6">
