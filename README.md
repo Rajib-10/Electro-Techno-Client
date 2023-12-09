@@ -4,6 +4,7 @@
 Electro&Techno is a  mern stack project where we are exploring react router,react private router ,firebase authentication and mongodb crud operation.
 
 # Live Link: [Electro&Techno](https://electro-techno.web.app/)
+# Server Link: [Electro&Techno server side](https://github.com/Rajib-10/Electro-techno-server)
 
 
 
